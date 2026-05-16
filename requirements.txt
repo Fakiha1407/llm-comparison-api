@@ -1,5 +1,8 @@
 fastapi
 uvicorn
 groq
-google-generativeai
+httpx
 python-dotenv
+pydantic
+sentence-transformers
+torch
