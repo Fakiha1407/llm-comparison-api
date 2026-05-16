@@ -12,7 +12,7 @@ load_dotenv()
 
 app = FastAPI(title="LLM Comparison API — Multi-Provider Enterprise Benchmark")
 
-# ── Clients ────────────────────────────────────────────────────────────────────
+# ── Clients 
 groq_client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 
 # Cerebras and Mistral use OpenAI-compatible endpoints
@@ -45,7 +45,7 @@ def calculate_cost(model: str, tokens_input: int, tokens_output: int) -> float:
         8
     )
 
-# ── Consistency scoring ────────────────────────────────────────────────────────
+#  Consistency scoring 
 def score_consistency(responses: list[str]) -> float:
     """
     Runs same prompt N times, measures semantic similarity between responses.
